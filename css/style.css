@@ -1,0 +1,634 @@
+@font-face {
+    font-family: 'Trade Gothic Extended';
+    src: url('../fonts/TradeGothicLTStd-Extended.otf');
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT';
+    src: url('../fonts/TradeGothicLT.ttf');
+}
+
+@font-face {
+    font-family: 'Freight Disp';
+    src: url('../fonts/FreightSansProLight-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Freight Disp Italic';
+    src: url('../fonts/FreightDispLightItalic.otf');
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    color: #52524F;
+    font-family: Trade Gothic Extended, sans-serif;
+    font-size: 16px;
+    line-height: 1.3;
+}
+
+.container {
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+
+/* ---------------------------------NAV */
+
+.nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+    background: #fff;
+}
+
+.nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-link {
+    margin-right: 25px;
+    color: #707070;
+    font-size: 11px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-link:last-child {
+    margin-right: 0;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.nav-logo {
+    font-size: 0;
+    margin-left: -140px;
+}
+
+.nav-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.nav-account {
+    display: flex;
+    align-items: center;
+}
+
+.nav-account a {
+    padding: 10px;
+    text-decoration: none;
+    color: #707070;
+    font-size: 11px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.nav-account a svg {
+    margin-right: 5px;
+}
+
+.nav-account a:hover svg path:last-child {
+    fill: #333;
+}
+
+.nav-account a:last-child {
+    margin-right: 0;
+}
+
+.nav-account a:hover {
+    color: #000;
+}
+
+
+
+/* ---------------------------------HEADER */
+
+.header {
+    background: url(../img/Levant.jpg) no-repeat center center /cover;
+}
+
+.header-inner {
+    height: 685px;
+    padding-top: 520px;
+}
+
+.header-title {
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.header-btn {
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 11px 29px;
+}
+
+
+
+/* ---------------------------------COLLECTION */
+
+.collection {
+    padding: 80px 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collection-item {
+ position: relative;
+ width: 25%;
+}
+
+.collection-photo {
+    width: 300px;
+    height: auto;
+}
+
+.collection-title {
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    font-family: Freight Disp, serif;
+    line-height: 1;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 16px;
+    width: 200px;
+    background: rgba(240, 90, 56, .9);
+
+    transition: width .35s ease;
+}
+
+.collection-item:first-child .collection-title h2 {
+    width: 100px;
+}
+
+.collection-item:nth-child(2) .collection-title {
+    background: rgba(64, 49, 41, .9);
+}
+
+.collection-item:nth-child(3) .collection-title {
+    width: 230px;
+    background: rgba(106, 80, 66, .9);
+}
+
+.collection-item:last-child .collection-title {
+    background: rgba(57, 57, 62, .9)
+}
+
+.collection-title:hover {
+    width: 220px;
+}
+
+.collection-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.collection-btn a {
+    padding: 10px 15px;
+    margin-bottom: 130px;
+    border-bottom: 1px solid #f05c39;
+    text-transform: uppercase;
+    color: #F05C39;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: color .2s ease, padding .2s ease;
+}
+
+.collection-btn a:hover {
+    color: #cb4324;
+    padding: 10px 0;
+    border-bottom: 1px solid #cb4324;
+}
+
+
+
+/* ---------------------------------EXPLORE */
+
+.explore {
+    background: #f0eae4;
+}
+
+.explore-inner {
+    position: relative;
+    height: 560px;
+    padding: 70px 0;
+}
+
+.explore-photo {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 500px;
+    height: auto;
+}
+
+.explore-text {
+    max-width: 600px;
+    position: absolute;
+    right: 0;
+}
+
+.explore-text blockquote {
+    font-family: Freight Disp Italic, serif;
+    font-size: 25px;
+    color: #403129;
+    line-height: 1.4;
+    margin-bottom: 30px;
+}
+
+.explore-text img {
+    width: 150px;
+    margin-bottom: 30px;
+}
+
+.explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #f05c39;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Trade Gothic LT, sans-serif;
+    font-size: 13px;
+
+    transition: background .2s linear;
+}
+
+.explore-btn:hover {
+    background: #403129;
+}
+
+
+
+/* ---------------------------------LABORATORY */
+
+.laboratory-inner {
+    position: relative;
+    padding: 90px 0;
+    padding-left: 40px;
+}
+
+.laboratory-title {
+    font-family: Freight Disp, serif;
+    font-size: 32px;
+    color: #f05c39;
+    margin-bottom: 30px;
+}
+
+.laboratory-text {
+    width: 360px;
+    margin-bottom: 20px;
+    font-family: Trade Gothic LT, sans-serif;
+    font-size: 17px;
+    color: #5254f;
+}
+
+.laboratory-photo {
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 700px;
+}
+
+
+/* ---------------------------------PHILOSOPHY */
+
+.philosophy-inner {
+    position: relative;
+    padding: 60px 0;
+    margin-bottom: 480px;
+}
+
+.philosophy-item {
+    position: absolute;
+    right: 0;
+    margin-right: 300px;
+}
+
+.philosophy-title {
+    font-family: Freight Disp, serif;
+    font-size: 32px;
+    color: #f05c39;
+    margin-bottom: 30px;
+}
+
+.philosophy-text {
+    width: 360px;
+    margin-bottom: 20px;
+    font-family: Trade Gothic LT, sans-serif;
+    font-size: 17px;
+    color: #5254f;
+}
+
+.philosophy-photo {
+    position: absolute;
+    left: 0;
+    top: -40px;
+    width: 500px;
+}
+
+
+
+/* ---------------------------------LATEST */
+
+.latest {
+    background: #4D372B;
+    padding: 60px 0 100px;
+    text-align: center;
+}
+
+.latest-subtitle {
+    color: #F05C39;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.latest-subtitle::after {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60px;
+    margin: 10px auto 5px;
+    background-color: #F05C39;
+}
+
+.latest-title {
+    color: #F05C39;
+    font-size: 38px;
+    font-family: Freight Disp, sans-serif;
+    margin-bottom: 50px;
+}
+
+.latest-inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+}
+
+.latest-item {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    cursor: pointer;
+}
+
+.latest-item:hover .latest-mask {
+    background: rgba(240, 90, 56, .5);
+}
+
+.latest-item:hover .latest-text {
+    bottom: -70px;
+}
+
+.latest-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    width: 600px;
+    height: 400px;
+    background: rgba(240, 90, 56, 0);
+
+    transition: background .2s linear;
+}
+
+.latest-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 400px;
+    z-index: 1;
+}
+
+.latest-text {
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    padding: 30px 0 30px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    font-family: Freight Disp, sans-serif;
+    color: #000;
+    font-size: 34px;
+
+    transition: bottom .2s linear;
+}
+
+.latest-btn a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 0;
+}
+
+.latest-btn a:hover {
+    color: #c3c3c3;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+
+
+/* ---------------------------------FOOTER */
+
+.top {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    margin-left: -30px;
+    background-color: #EF6C4E;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.top-btn {
+    cursor: pointer;
+    border: none;
+}
+
+.top:hover {
+    background-color: #eb4520;
+}
+
+.top span {
+    position: absolute;
+    top: 21px;
+    left: 22%;
+    text-transform: uppercase;
+    font-family: Trade Gothic Extended, sans-serif;
+    font-size: 13px;
+    color: #fff;
+}
+
+.footer {
+    position: relative;
+    padding: 100px 0 35px;
+    background: #F05C39;
+    color: #fff;
+    font-family: Trade Gothic LT, sans-serif;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-item {
+    width: 25%;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer a:hover {
+    color: #eb9e8f;
+}
+
+.footer-title {
+    margin-bottom: 30px;
+    font-family: Trade Gothic Extended, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.footer-mail {
+    margin-bottom: 50px;
+}
+
+.footer-mail a {
+    text-decoration: underline;
+}
+
+.social-title {
+    margin-bottom: 20px;
+    font-family: Trade Gothic Extended, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.social-icon img {
+    margin-right: 15px;
+}
+
+.footer-item:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item:nth-child(2) div {
+    margin-bottom: 5px;
+}
+
+.account-btn {
+    font-family: Trade Gothic Extended, sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.account-btn svg {
+    margin-right: 10px;
+}
+
+.account-btn:hover svg path:last-child {
+    fill: #eb9e8f;
+}
+
+.account-inner {
+    margin-bottom: 10px;
+}
+
+
+.input-inner {
+    margin-bottom: 15px;
+}
+
+.input-inner input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    padding: 5px 0;
+    outline: none;
+    color: #fff;
+    font-family: Trade Ghotic LT, sans-serif;
+    font-size: 16px;
+}
+
+.input-inner input::placeholder {
+    color: #eb9e8f;
+}
+
+.privacy {
+    display: flex;
+    margin: 30px 0;
+}
+
+.privacy input {
+    margin-top: -30px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.privacy label {
+    font-size: 12px;
+    color: #f4d1ca;
+}
+
+.sign {
+    background-color: #EAE1D8;
+    color: #4D372B;
+    padding: 9px 35px;
+    font-family: Trade Ghotic LT, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    border: none;
+    margin-bottom: 70px;
+    cursor: pointer;
+}
+
+.sign:hover {
+    border: 1px solid #4D372B;
+    padding: 8px 34px;
+}
+
+.copy {
+    font-family: Trade Ghotic LT, sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+}
