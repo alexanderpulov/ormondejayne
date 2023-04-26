@@ -30,12 +30,21 @@ body {
     font-family: Trade Gothic Extended, sans-serif;
     font-size: 16px;
     line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
+    width: 100%;
     max-width: 1290px;
     margin: 0 auto;
     padding: 0 30px;
+}
+
+.img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -121,6 +130,16 @@ body {
 
 
 
+/* ---------------------------------BURGER */
+.burger {
+    display: none;
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+
+
 /* ---------------------------------HEADER */
 
 .header {
@@ -148,6 +167,12 @@ body {
     color: #fff;
     border: 1px solid #fff;
     padding: 11px 29px;
+
+    transition: background-color .1s linear;
+}
+
+.header-btn:hover {
+    background-color: rgba(225, 225, 225, 0.9);
 }
 
 
@@ -168,6 +193,7 @@ body {
 .collection-photo {
     width: 300px;
     height: auto;
+    margin: auto;
 }
 
 .collection-title {
@@ -306,7 +332,8 @@ body {
 }
 
 .laboratory-text {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     margin-bottom: 20px;
     font-family: Trade Gothic LT, sans-serif;
     font-size: 17px;
@@ -343,7 +370,8 @@ body {
 }
 
 .philosophy-text {
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     margin-bottom: 20px;
     font-family: Trade Gothic LT, sans-serif;
     font-size: 17px;
@@ -365,6 +393,7 @@ body {
     background: #4D372B;
     padding: 60px 0 100px;
     text-align: center;
+    overflow: hidden;
 }
 
 .latest-subtitle {
@@ -631,4 +660,214 @@ body {
     font-family: Trade Ghotic LT, sans-serif;
     text-transform: uppercase;
     font-size: 11px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media */
+
+@media (max-width: 1180px) {
+    .explore-photo {
+        width: 450px;
+    }
+
+    .explore-text {
+        width: 500px;
+    }
+
+    .explore-text blockquote {
+        font-size: 24px;
+    }
+
+    .laboratory-photo {
+        width: 530px;
+    }
+
+    .philosophy-item {
+        margin-right: 30px;
+    }
+
+    .latest-item {
+        width: 450px;
+        height: 250px;
+    }
+
+    .latest-mask {
+        width: 450px;
+        height: 250px;
+    }
+
+    .latest-photo {
+        width: 450px;
+        height: 250px;
+    }
+
+    .latest-text {
+        width: 350px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .burger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-account {
+        display: none;
+    }
+
+    .collection {
+        flex-wrap: wrap;
+    }
+
+    .collection-item {
+        width: 50%;
+        margin-bottom: 80px;
+    }
+
+    .collection-title {
+        right: 100px;
+    }
+
+    .explore-photo {
+        width: 320px;
+    }
+
+    .explore-text {
+        width: 400px;
+    }
+
+    .explore-text blockquote {
+        font-size: 23px;
+    }
+
+    .laboratory-photo {
+        display: none;
+    }
+
+    .philosophy-inner {
+        margin-bottom: 250px;
+    }
+
+    .philosophy-photo {
+        display: none;
+    }
+
+    .latest-inner {
+        flex-direction: column;
+    }
+
+    .latest-item {
+        margin: 0 auto 100px;
+    }
+
+    .footer-inner {
+        justify-content: space-around;
+    }
+
+    .footer-item {
+        width: 50%;
+        margin: 0 5px;
+    }
+
+    .footer-item:nth-child(2),
+    .footer-item:nth-child(3) {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 767px) {
+    .collection-title {
+        width: 170px;
+        font-size: 14px;
+        right: 50px;
+    }
+
+    .explore-photo {
+        width: 300px;
+    }
+
+    .explore-text {
+        width: 300px;
+    }
+
+    .explore-text blockquote {
+        font-size: 20px;
+    }
+
+    .philosophy-inner {
+        margin-bottom: 250px;
+    }
+}
+
+@media (max-width: 675px) {
+    .explore-photo {
+        width: 250px;
+    }
+}
+
+@media (max-width: 575px) {
+    .collection-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .explore-photo {
+        display: none;
+    }
+
+    .laboratory-inner {
+        position: static;
+        padding-left: 10px;
+    }
+
+    .philosophy-inner {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .philosophy-item {
+        position: static;
+        padding-left: 10px;
+    }
+
+    .latest-item {
+        width: 300px;
+        height: 150px;
+    }
+
+    .latest-mask {
+        width: 300px;
+        height: 150px;
+    }
+
+    .latest-photo {
+        width: 300px;
+        height: 150px;
+    }
+
+    .latest-text {
+        width: 200px;
+        font-size: 18px;
+    }
 }
