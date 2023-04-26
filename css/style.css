@@ -88,7 +88,7 @@ body {
 
 .nav-logo {
     font-size: 0;
-    margin-left: -140px;
+    margin: auto;
 }
 
 .nav-logo img {
