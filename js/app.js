@@ -1,5 +1,19 @@
 $(function() {
 
+    // Nav Toggle on mobile
+
+    let navToggle = $('#navToggle');
+    let navMenu = $('#nav-menu');
+
+    navToggle.on('click', function(event) {
+        event.preventDefault();
+        navMenu.toggleClass('show');
+    });
+
+
+
+
+
     let nav = $("#nav");
     let navH = nav.innerHeight();
 
