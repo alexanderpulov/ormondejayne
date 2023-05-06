@@ -58,6 +58,7 @@ body {
     z-index: 1000;
     padding: 20px 0;
     background: #fff;
+    height: 80px;
 }
 
 .nav .container{
@@ -88,7 +89,11 @@ body {
 
 .nav-logo {
     font-size: 0;
-    margin: auto;
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    margin-left: -100px;
+    z-index: 1;
 }
 
 .nav-logo img {
@@ -143,7 +148,8 @@ body {
 /* ---------------------------------HEADER */
 
 .header {
-    background: url(../img/Levant.jpg) no-repeat center center /cover;
+    background: url(../img/Levant.jpg) no-repeat center;
+    background-size: cover;
 }
 
 .header-inner {
@@ -264,23 +270,20 @@ body {
 }
 
 .explore-inner {
-    position: relative;
-    height: 560px;
-    padding: 70px 0;
+    display: flex;
+    padding: 70px 0 0;
 }
 
 .explore-photo {
-    position: absolute;
-    left: 0;
-    top: -40px;
+    position: relative;
+    top: -110px;
     width: 500px;
     height: auto;
 }
 
 .explore-text {
     max-width: 600px;
-    position: absolute;
-    right: 0;
+    margin-left: 100px;
 }
 
 .explore-text blockquote {
@@ -319,9 +322,14 @@ body {
 /* ---------------------------------LABORATORY */
 
 .laboratory-inner {
-    position: relative;
-    padding: 90px 0;
-    padding-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 90px 0 0;
+}
+
+.laboratory-item {
+    margin-left: 50px;
+    margin-right: 20px;
 }
 
 .laboratory-title {
@@ -341,25 +349,21 @@ body {
 }
 
 .laboratory-photo {
-    position: absolute;
-    right: 0;
-    top: -40px;
+    position: relative;
+    top: -130px;
     width: 700px;
 }
+
 
 
 /* ---------------------------------PHILOSOPHY */
 
 .philosophy-inner {
-    position: relative;
-    padding: 60px 0;
-    margin-bottom: 480px;
+    display: flex;
 }
 
 .philosophy-item {
-    position: absolute;
-    right: 0;
-    margin-right: 300px;
+    margin-left: 80px;
 }
 
 .philosophy-title {
@@ -379,9 +383,8 @@ body {
 }
 
 .philosophy-photo {
-    position: absolute;
-    left: 0;
-    top: -40px;
+    position: relative;
+    top: -150px;
     width: 500px;
 }
 
@@ -677,28 +680,14 @@ body {
 
 
 
+
 /* Media */
 
 @media (max-width: 1180px) {
-    .explore-photo {
-        width: 450px;
-    }
 
-    .explore-text {
-        width: 500px;
-    }
-
-    .explore-text blockquote {
-        font-size: 24px;
-    }
-
-    .laboratory-photo {
-        width: 530px;
-    }
-
-    .philosophy-item {
+    /* .philosophy-item {
         margin-right: 30px;
-    }
+    } */
 
     .latest-item {
         width: 450px;
@@ -718,6 +707,22 @@ body {
     .latest-text {
         width: 350px;
         font-size: 24px;
+    }
+}
+
+@media (max-width: 1070px) {
+
+    .laboratory-photo {
+        width: 500px;
+    }
+
+    .philosophy-photo {
+        width: 350px;
+        top: -30px;
+    }
+
+    .philosophy-inner {
+        margin-bottom: 80px;
     }
 }
 
@@ -766,28 +771,54 @@ body {
         right: 100px;
     }
 
+    .explore-inner {
+        padding-bottom: 30px;
+    }
+
     .explore-photo {
-        width: 320px;
+        width: 400px;
     }
 
     .explore-text {
         width: 400px;
+        margin-left: 70px;
     }
 
     .explore-text blockquote {
-        font-size: 23px;
+        font-size: 20px;
+    }
+
+    .explore-name {
+        font-size: 14px;
+    }
+
+    .laboratory-inner {
+        flex-direction: column;
+        margin-bottom: 70px;
+    }
+
+    .laboratory-item {
+        margin-bottom: 30px;
     }
 
     .laboratory-photo {
-        display: none;
+        position: static;
+        margin: 0 auto;
     }
 
     .philosophy-inner {
-        margin-bottom: 250px;
+        flex-direction: column;
     }
 
     .philosophy-photo {
-        display: none;
+        order: 2;
+        position: static;
+        margin: 0 auto;
+    }
+
+    .philosophy-item {
+        order: 1;
+        margin-bottom: 30px;
     }
 
     .latest-inner {
@@ -821,47 +852,57 @@ body {
         right: 50px;
     }
 
+    .explore-inner {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     .explore-photo {
-        width: 300px;
+        width: 350px;
+        top: -80px;
     }
 
     .explore-text {
         width: 300px;
+        margin-left: 40px;
     }
 
     .explore-text blockquote {
         font-size: 20px;
     }
 
-    .philosophy-inner {
-        margin-bottom: 250px;
-    }
+
 }
 
-@media (max-width: 675px) {
-    .explore-photo {
-        width: 250px;
+@media (max-width: 720px) {
+
+    .explore-inner {
+        flex-direction: column;
+
     }
+
+    .explore-photo {
+        position: static;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+    .explore-text {
+        margin: 0 auto;
+    }
+
 }
 
 @media (max-width: 575px) {
+
     .collection-item {
         width: 100%;
         margin-right: 0;
     }
 
-    .explore-photo {
-        display: none;
-    }
-
     .laboratory-inner {
         position: static;
         padding-left: 10px;
-    }
-
-    .philosophy-inner {
-        position: static;
-        margin-bottom: 20px;
     }
 
     .philosophy-item {
@@ -887,5 +928,9 @@ body {
     .latest-text {
         width: 200px;
         font-size: 18px;
+    }
+
+    .footer-item {
+        margin-right: 20px;
     }
 }
